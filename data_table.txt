@@ -1,0 +1,15 @@
+1
+		SELECT tbl_student.student_name, tbl_student.student_roll_number, tbl_grade.grade_name, tbl_attendance.attendance_status, tbl_attendance.attendance_date FROM tbl_attendance 
+		INNER JOIN tbl_student 
+		ON tbl_student.student_id = tbl_attendance.student_id 
+		INNER JOIN tbl_grade 
+		ON tbl_grade.grade_id = tbl_student.student_grade_id 
+		WHERE tbl_attendance.teacher_id = '4' AND (
+		
+			tbl_student.student_name LIKE "%%" 
+			OR tbl_student.student_roll_number LIKE "%%" 
+			OR tbl_attendance.attendance_status LIKE "%%" 
+			OR tbl_attendance.attendance_date LIKE "%%") 
+			
+			ORDER BY tbl_attendance.attendance_id DESC 
+			
