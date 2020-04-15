@@ -2,7 +2,7 @@
 
 //database_connection.php
 
-$connect = new PDO("mysql:host=localhost;dbname=attendance","niramay","Unique123!");
+$connect = new PDO("mysql:host=localhost;dbname=attendance","niramay","<password>");
 
 //$base_url = "http://localhost/tutorial/student-attendance-system-in-php-using-ajax/";
 $base_url = "http://127.0.0.1:3000";
